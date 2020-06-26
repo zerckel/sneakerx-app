@@ -4,10 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "node server.js",
-    "postinstall": "npm run build",
-    "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "start": "node server.js"
   },
   "dependencies": {
     "@ionic/vue": "0.0.4",
