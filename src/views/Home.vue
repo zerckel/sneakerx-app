@@ -7,7 +7,7 @@
 
         <ion-list>
             <ion-list-header color="dark" class="headline">
-                <ion-label>Find the 10 Top PRODUCTS</ion-label>
+                <ion-label>10 Top PRODUCTS</ion-label>
             </ion-list-header>
             <ion-items v-for="product in products">
                 <product :product="product"/>
