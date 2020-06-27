@@ -1,7 +1,7 @@
 <template>
     <router-link :to="{ name: 'product', params: { id: product.id }}">
         <ion-card>
-            <ion-toolbar color="primary">
+            <ion-toolbar color="dark">
                 <ion-title>
                     PRODUCT
                 </ion-title>

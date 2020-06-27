@@ -1,6 +1,6 @@
 <template>
     <ion-card>
-        <ion-toolbar color="primary">
+        <ion-toolbar color="dark">
             <ion-title>
                 NEWS
             </ion-title>

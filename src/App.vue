@@ -9,12 +9,16 @@
         </ion-header>
         <router-view></router-view>
         <ion-footer class="ion-no-border">
-            <ion-toolbar class="footer">
+            <ion-toolbar color="dark" class="footer">
                 <router-link to="catalog">
-                    <ion-icon name="mail-outline"></ion-icon>
+                    <ion-title class="footer-title">
+                        CATALOG
+                    </ion-title>
                 </router-link>
                 <router-link to="contact">
-                    <ion-icon name="mail-outline"></ion-icon>
+                    <ion-title class="footer-title">
+                        CONTACT
+                    </ion-title>
                 </router-link>
             </ion-toolbar>
         </ion-footer>
@@ -81,6 +85,11 @@
 
         .footer {
             display: flex;
+
+            .footer-title {
+                display: inline-block;
+                color: white;
+            }
         }
 
         .searchbar {

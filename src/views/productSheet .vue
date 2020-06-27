@@ -1,6 +1,6 @@
 <template>
     <ion-content id="product">
-        <ion-card>
+        <ion-card class="product">
             <div class="slider">
                 <div class="img-container" v-for="pic in article.secondarypics">
                     <ion-img class="img" :src="pic"></ion-img>
@@ -15,7 +15,7 @@
                     </span>
                 </ion-card-subtitle>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content class="content">
                 {{ article.description }}
             </ion-card-content>
             <ion-button color="primary">
@@ -30,6 +30,23 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            -webkit-margin-start: 0;
+            margin-inline-start: 0;
+            -webkit-margin-end: 0;
+            margin-inline-end: 0;
+            margin: 0;
+
+            .content{
+                flex-grow: 4;
+            }
+        }
 
         .slider {
             display: flex;
