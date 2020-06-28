@@ -3,6 +3,7 @@ const path = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = (env, argv) => ({
@@ -53,6 +54,14 @@ module.exports = (env, argv) => ({
 
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new SWPrecacheWebpackPlugin({
+      cacheId: 'my-pwa-vue-app',
+      filename: 'service-worker-cache.js',
+      staticFileGlobs: ['dist/**/*.{js,css}', '/'],
+      minify: true,
+      stripPrefix: 'dist/',
+      dontCacheBustUrlsMatching: /\.\w{6}\./
+    }),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'static', 'index.html'),
