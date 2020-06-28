@@ -10,7 +10,8 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### URL
 ```
-npm run build
+GIT: https://github.com/zerckel/sneakerx-app
+PROD: https://sneakerx-app.herokuapp.com/
 ```

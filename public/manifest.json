@@ -1,21 +1,17 @@
 {
-  "short_name": "FirstVuePWA",
-  "name": "First Vue PWA App",
-  "icons": [
-    {
-      "src": "/logo.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/logo.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/?utm_source=a2hs",
-  "background_color": "#FFFFFF",
+  "name": "SneakerX App",
+  "short_name": "Sneaker",
+  "theme_color": "#ffcbe4",
+  "background_color": "#fa99ca",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#FFFFFF"
+  "start_url": "https://api-sneakerx.herokuapp.com/",
+  "description": "SneakerX E-commerce for selling sneaker",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://api-sneakerx.herokuapp.com/logo.png",
+      "sizes": "1024x1024"
+    }
+  ]
 }
