@@ -1,0 +1,17 @@
+{
+  "name": "SneakerX App",
+  "short_name": "Sneaker",
+  "theme_color": "#ffcbe4",
+  "background_color": "#fa99ca",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://api-sneakerx.herokuapp.com/",
+  "description": "SneakerX E-commerce for selling sneaker",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://api-sneakerx.herokuapp.com/logo.png",
+      "sizes": "1024x1024"
+    }
+  ]
+}

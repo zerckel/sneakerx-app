@@ -10,7 +10,7 @@
                     </ion-segment-button>
                     <ion-segment class="logoContainer">
                         <router-link slot="secondary" to="/">
-                            <ion-img class="logo" src="static/logo.png"></ion-img>
+                            <ion-img class="logo" src="img/logo.png"></ion-img>
                         </router-link>
                     </ion-segment>
                 </ion-segment>
