@@ -5,21 +5,24 @@
                 <ion-label>Here the result for : {{search}}</ion-label>
             </ion-list-header>
             <ion-items v-for="product in result">
-                {{ product.name }}
+                <product :product="product"/>
             </ion-items>
             <ion-card v-show="result === undefined">
                 <ion-card-content>
                     Sorry, no products found
                 </ion-card-content>
             </ion-card>
-
         </ion-list>
     </ion-content>
 </template>
 <script>
+  import product from '@/components/products.vue'
 
   export default {
     name: 'Search',
+    components:{
+      'product': product
+    },
     data() {
       return {
         search: '',

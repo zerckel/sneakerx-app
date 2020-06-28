@@ -5,10 +5,11 @@ import catalog from '../views/catalog.vue'
 import contact from '../views/contact.vue'
 import Result from '../views/Result.vue'
 import productSheet from '../views/productSheet .vue'
+import productList from '../views/productList .vue'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -30,10 +31,15 @@ Vue.use(VueRouter)
     component: catalog
   },
   {
+    path: '/catalog/:brand',
+    name: 'productList',
+    component: productList
+  },
+  {
     path: '/product/:id',
     name: 'product',
     component: productSheet
-  }
+  },
 ]
 
 const router = new VueRouter({

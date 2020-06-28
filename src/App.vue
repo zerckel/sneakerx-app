@@ -2,9 +2,18 @@
     <div id="app">
         <ion-header>
             <ion-toolbar color="dark">
-                <router-link to="/">
-                    <ion-img class="logo" src="/img/logo.png"></ion-img>
-                </router-link>
+                <ion-segment>
+                    <ion-segment-button slot="start" v-on:click="$router.back()" v-show="$route.path !== '/'">
+                        <ion-label>
+                            < back
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment class="logoContainer">
+                        <router-link slot="secondary" to="/">
+                            <ion-img class="logo" src="/img/logo.png"></ion-img>
+                        </router-link>
+                    </ion-segment>
+                </ion-segment>
             </ion-toolbar>
         </ion-header>
         <router-view></router-view>
@@ -78,9 +87,15 @@
         justify-content: space-between;
         min-height: 100vh;
 
-        .logo {
-            width: 50vw;
-            display: inline-block;
+        .logoContainer {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                display: flex;
+                align-items: center;
+                width: 50vw;
+            }
         }
 
         .footer {
